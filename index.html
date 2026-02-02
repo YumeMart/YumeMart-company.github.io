@@ -134,21 +134,23 @@
     }
 
     .qr-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
-    }
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* اثنين جنب بعض */
+  justify-content: center;               /* توسيطهم */
+  gap: 25px;                             /* قربهم من بعض */
+}
 
-    .qr-item img {
-      width: 160px;
-      border-radius: 12px;
-    }
+.qr-item img {
+  width: 170px;        /* نفس حجم الصورة تقريبًا */
+  border-radius: 18px;
+}
 
-    .qr-item p {
-      margin-top: 12px;
-      font-weight: 500;
-      color: #1E6F4F;
-    }
+.qr-item p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #00cfff;      /* نفس لون النص بالصورة */
+  font-size: 18px;
+}
 
     footer {
       background: #111;
