@@ -18,21 +18,20 @@
 
     /* Barnoosko-style Header */
     .top-header {
-      background: linear-gradient(180deg, #000000, #0f0f0f);
-      padding: 28px 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 22px 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
     .logo {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      margin-bottom: 14px;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
     .top-nav {
       display: flex;
-      gap: 40px;
-      font-size: 18px;
-      opacity: 0.85;
+      gap: 28px;
+      font-size: 16px;
+      font-weight: 500;
     }
     .top-nav a:hover { opacity: 1; }
 
@@ -106,7 +105,14 @@
     }
 
     @media (max-width: 900px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 14px;
+      }
+      .top-nav { gap: 20px; font-size: 15px; }
+      .hero h2 { font-size: 34px; }
       .about { grid-template-columns: 1fr; }
+    }
       .top-nav { gap: 22px; font-size: 16px; }
       .hero h2 { font-size: 34px; }
     }
@@ -115,14 +121,15 @@
 <body>
 
 <header class="top-header">
-  <div class="logo">YUMEMART</div>
-  <nav class="top-nav">
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#brands">Brands</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <div class="logo">YUMEMART</div>
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#brands">Brands</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
