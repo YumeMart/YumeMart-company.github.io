@@ -100,12 +100,24 @@
     }
 
     .brands {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      opacity: 0.75;
-      font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  text-align: center;
+}
+
+.brand-item img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.brand-item span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0f6f4f;
+
     }
 
     .contact {
@@ -293,10 +305,24 @@
     <p>Companies under YumeMart</p>
   </div>
   <div class="brands">
-    <strong>YumeMart</strong>
-    <strong>Fastners</strong>
-    <strong>Barnoosko</strong>
+
+  <div class="brand-item">
+    <img src="yumemart-logo.png" alt="YumeMart">
+    <span>YumeMart</span>
   </div>
+
+  <div class="brand-item">
+    <img src="fastners-logo.png" alt="Fastners">
+    <span>Fastners</span>
+  </div>
+
+  <div class="brand-item">
+    <img src="barnoosko-logo.png" alt="Barnoosko">
+    <span>Barnoosko</span>
+  </div>
+
+</div>
+  
 </section>
   
   <!-- ===== 1 SOCIAL MEDIA LINKS ===== -->
