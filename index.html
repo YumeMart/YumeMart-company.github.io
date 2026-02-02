@@ -101,24 +101,24 @@
 
     .brands {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 40px;
   justify-items: center;
-  text-align: center;
+  align-items: center;
 }
 
-.brand-item img {
-  width: 120px;
-  height: auto;
-  margin-bottom: 12px;
+.brands img {
+  width: 140px;
+  max-height: 80px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: all 0.3s ease;
 }
 
-.brand-item span {
-  font-weight: 600;
-  font-size: 16px;
-  color: #0f6f4f;
-
-    }
+.brands img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
 
     .contact {
       background: #fff;
@@ -305,22 +305,11 @@
     <p>Companies under YumeMart</p>
   </div>
   <div class="brands">
-
-  <div class="brand-item">
-    <img src="yumemart-logo.png" alt="YumeMart">
-    <span>YumeMart</span>
-  </div>
-
-  <div class="brand-item">
-    <img src="fastners-logo.png" alt="Fastners">
-    <span>Fastners</span>
-  </div>
-
-  <div class="brand-item">
-    <img src="barnoosko-logo.png" alt="Barnoosko">
-    <span>Barnoosko</span>
-  </div>
-
+  <img src="brand1.png" alt="Brand 1">
+  <img src="brand2.png" alt="Brand 2">
+  <img src="brand3.png" alt="Brand 3">
+  <img src="brand4.png" alt="Brand 4">
+  <img src="brand5.png" alt="Brand 5">
 </div>
   
 </section>
