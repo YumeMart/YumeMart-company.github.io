@@ -12,7 +12,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #b8d6c8; /* ONLY CHANGE HERE */
+      background: #b8d6c8;
       color: #222;
       line-height: 1.6;
     }
@@ -26,14 +26,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: nowrap;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
     }
 
     .logo-wrap img { height: 38px; }
@@ -42,7 +34,6 @@
       display: flex;
       gap: 16px;
       align-items: center;
-      white-space: nowrap;
     }
 
     nav a {
@@ -69,11 +60,6 @@
 
     .section-title h3 { font-size: 32px; }
 
-    .section-title p {
-      color: #666;
-      margin-top: 10px;
-    }
-
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -99,13 +85,37 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .brands {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    /* ===== QR BOX ===== */
+    .qr-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 50px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .qr-box h3 {
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
+
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 40px;
-      opacity: 0.75;
-      font-size: 20px;
+    }
+
+    .qr-item img {
+      width: 160px;
+      border-radius: 12px;
+    }
+
+    .qr-item p {
+      margin-top: 12px;
+      font-weight: 500;
+      color: #1E6F4F;
     }
 
     .contact {
@@ -126,9 +136,6 @@
     }
 
     @media (max-width: 900px) {
-      header { flex-direction: row; }
-      nav a { font-size: 13px; }
-      .about { grid-template-columns: 1fr; }
       section { padding: 60px 30px; }
       .hero { height: 260px; }
     }
@@ -157,7 +164,7 @@
     <p>
       We are a leading company in cooling and air conditioning specialized in providing comprehensive AC solutions including central systems, split units, ducted split, and commercial & industrial systems.
     </p>
-    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="About">
+    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
   </div>
 </section>
 
@@ -182,15 +189,20 @@
   </div>
 </section>
 
-<section id="brands">
-  <div class="section-title">
-    <h3>Our Brands</h3>
-    <p>Companies under YumeMart</p>
-  </div>
-  <div class="brands">
-    <strong>YumeMart</strong>
-    <strong>Fastners</strong>
-    <strong>Barnoosko</strong>
+<!-- ===== QR SECTION ===== -->
+<section id="qr">
+  <div class="qr-box">
+    <h3>Scan & Connect</h3>
+    <div class="qr-grid">
+      <div class="qr-item">
+        <img src="qr-whatsapp.png">
+        <p>WhatsApp</p>
+      </div>
+      <div class="qr-item">
+        <img src="qr-instagram.png">
+        <p>Instagram</p>
+      </div>
+    </div>
   </div>
 </section>
 
