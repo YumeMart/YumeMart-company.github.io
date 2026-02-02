@@ -125,13 +125,32 @@
       .about { grid-template-columns: 1fr; }
       .hero { padding: 80px 30px; }
       section { padding: 60px 30px; }
+
+      @media (max-width: 600px) {
+  .logo img {
+    height: 30px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+}
+
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>YumeMart</h1>
+  <div class="logo">
+    <img src="logo.png" alt="YumeMart Logo">
+    <span>YumeMart</span>
+  </div>
+
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -139,6 +158,23 @@
     <a href="#contact">Contact</a>
   </nav>
 </header>
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 36px;   /* حجم الشعار */
+  width: auto;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 
 <section class="hero">
   <h2>Building International Trade & E-Commerce Solutions</h2>
