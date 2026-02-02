@@ -101,8 +101,8 @@
 
     .brands {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr); /* براندين في كل لاين */
+  gap: 30px;
   justify-items: center;
   align-items: center;
 }
@@ -260,7 +260,17 @@
   margin: auto;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-</style>
+.brands-box h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.brands-box p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
   </style>
 </head>
 
@@ -307,12 +317,11 @@
 </section>
 
 <section id="brands">
-  <div class="section-title">
+  <div class="brands-box">
+
     <h3>Our Partners</h3>
     <p>Brands we work with</p>
-  </div>
 
-  <div class="brands-box">
     <div class="brands">
       <img src="brand1.png" alt="Brand 1">
       <img src="brand2.png" alt="Brand 2">
@@ -320,6 +329,7 @@
       <img src="brand4.png" alt="Brand 4">
       <img src="brand5.png" alt="Brand 5">
     </div>
+
   </div>
 </section>
   
