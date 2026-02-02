@@ -315,6 +315,17 @@
     max-width: 260px;     /* نفس عرض البوكسات */
   }
 }
+    .services-image-only {
+  padding: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.services-image-only img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
   </style>
 </head>
 
@@ -339,8 +350,8 @@
 </section>
  
 
-<section id="services" class="about-image-only">
-  <img src="services.jpg" alt="Our Services">
+<section id="services" class="services-image-only">
+  <img src="services-full.jpg" alt="Our Services">
 </section>
 
 <section id="brands">
