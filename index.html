@@ -56,10 +56,10 @@
 
     nav a:hover { opacity: 1; }
 
-    /* ================= HERO (FIXED) ================= */
+    /* ================= HERO (NO CROP) ================= */
     .hero {
-      background: url('yume.jpeg') center center / cover no-repeat;
-      padding: 0;
+      background: url('yume.jpeg') center center / contain no-repeat;
+      background-color: #0f6f4f; /* نفس أخضر الصورة */
       height: 420px;
       width: 100%;
     }
@@ -140,7 +140,7 @@
       margin-top: 80px;
     }
 
-    /* ================= MOBILE FIX ================= */
+    /* ================= MOBILE ================= */
     @media (max-width: 900px) {
       header {
         flex-direction: column;
@@ -157,7 +157,7 @@
 
       .hero {
         height: 260px;
-        background-size: cover;
+        background-size: contain;
       }
     }
   </style>
@@ -179,7 +179,6 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero"></section>
 
 <section id="about">
