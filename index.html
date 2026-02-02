@@ -3,138 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YumeMart | International Trading & E‑Commerce</title>
-  <meta name="description" content="YumeMart – International Trading, Retail & E‑Commerce Solutions" />
+  <title>YumeMart | International Trading & E-Commerce</title>
+  <meta name="description" content="YumeMart – International Trading, Retail & E-Commerce Solutions" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0b0b0b;
-      color: #eaeaea;
+      background: #f5f7fa;
+      color: #222;
       line-height: 1.6;
     }
+
     a { text-decoration: none; color: inherit; }
 
-    /* Barnoosko-style Header */
-    .top-header {
+    /* ===== HEADER (ONE LINE FIXED) ===== */
+    header {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
       padding: 22px 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
     }
-    .logo {
+
+    header h1 {
       font-size: 24px;
-      font-weight: 600;
       letter-spacing: 1px;
+      white-space: nowrap;
     }
-    .top-nav {
+
+    nav {
       display: flex;
       gap: 28px;
-      font-size: 16px;
-      font-weight: 500;
+      white-space: nowrap;
     }
-    .top-nav a:hover { opacity: 1; }
 
-    /* Hero */
+    nav a {
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    /* ===== HERO ===== */
     .hero {
       background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') center/cover no-repeat;
       color: #fff;
-      padding: 120px 40px;
+      padding: 120px 60px;
     }
+
     .hero h2 {
       font-size: 44px;
       max-width: 700px;
-      font-weight: 700;
     }
+
     .hero p {
       max-width: 600px;
       margin-top: 15px;
       font-size: 18px;
-      opacity: 0.9;
     }
 
-    section { padding: 80px 40px; background:#0b0b0b; }
+    .hero button {
+      margin-top: 30px;
+      padding: 14px 32px;
+      border: none;
+      background: #ffb703;
+      color: #000;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 80px 60px; }
 
     .section-title {
-      margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 50px;
     }
-    .section-title h3 { font-size: 30px; }
-    .section-title p { color: #aaa; margin-top: 8px; }
 
+    .section-title h3 { font-size: 32px; }
+
+    .section-title p {
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* ===== ABOUT ===== */
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: center;
     }
-    .about img { width: 100%; border-radius: 14px; }
 
+    .about img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    /* ===== SERVICES ===== */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
+
     .service-box {
-      background: #141414;
+      background: #fff;
       padding: 35px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
     }
 
+    .service-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-box h4 {
+      margin-bottom: 12px;
+    }
+
+    /* ===== BRANDS ===== */
     .brands {
       display: flex;
-      gap: 50px;
-      font-size: 20px;
-      opacity: 0.8;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+      opacity: 0.7;
     }
 
+    /* ===== CONTACT ===== */
     .contact {
-      background: #141414;
-      border-radius: 18px;
-      padding: 40px;
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #fff;
+      border-radius: 20px;
+      padding: 50px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
+    .contact p {
+      margin-bottom: 12px;
+    }
+
+    /* ===== FOOTER ===== */
     footer {
-      background: #000;
-      color: #777;
+      background: #111;
+      color: #aaa;
       text-align: center;
       padding: 30px;
-      margin-top: 60px;
-      font-size: 14px;
+      margin-top: 80px;
     }
 
+    /* ===== MOBILE FIX (STAYS ONE LINE) ===== */
     @media (max-width: 900px) {
-      .header-inner {
-        flex-direction: column;
-        gap: 14px;
+      header {
+        padding: 18px 20px;
       }
-      .top-nav { gap: 20px; font-size: 15px; }
-      .hero h2 { font-size: 34px; }
-      .about { grid-template-columns: 1fr; }
-    }
-      .top-nav { gap: 22px; font-size: 16px; }
-      .hero h2 { font-size: 34px; }
+
+      nav {
+        gap: 18px;
+        font-size: 15px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 80px 30px;
+      }
+
+      section {
+        padding: 60px 30px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header class="top-header">
-  <div class="header-inner">
-    <div class="logo">YUMEMART</div>
-    <nav class="top-nav">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#brands">Brands</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<header>
+  <h1>YumeMart</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#brands">Brands</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Building International Trade & E‑Commerce Solutions</h2>
-  <p>YumeMart is a professional trading and e‑commerce company delivering reliable products and services worldwide.</p>
+  <h2>Building International Trade & E-Commerce Solutions</h2>
+  <p>
+    YumeMart is a professional trading and e-commerce company delivering reliable
+    products and services worldwide.
+  </p>
   <button>Get Started</button>
 </section>
 
@@ -143,10 +214,12 @@
     <h3>About YumeMart</h3>
     <p>Professional. Scalable. Global.</p>
   </div>
+
   <div class="about">
     <p>
-      YumeMart is an international company focused on trading, retail, and digital commerce. 
-      We connect suppliers and customers through reliable logistics, strong partnerships, and modern technology.
+      YumeMart is an international company focused on trading, retail, and digital commerce.
+      We connect suppliers and customers through reliable logistics, strong partnerships,
+      and modern technology.
     </p>
     <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="About">
   </div>
@@ -157,15 +230,18 @@
     <h3>Our Services</h3>
     <p>What we deliver</p>
   </div>
+
   <div class="services">
     <div class="service-box">
       <h4>International Trading</h4>
       <p>Import & export solutions with trusted global partners.</p>
     </div>
+
     <div class="service-box">
-      <h4>E‑Commerce Platforms</h4>
-      <p>Multi‑brand online sales with full control and scalability.</p>
+      <h4>E-Commerce Platforms</h4>
+      <p>Multi-brand online sales with full control and scalability.</p>
     </div>
+
     <div class="service-box">
       <h4>Retail & Distribution</h4>
       <p>Local and regional distribution for fast market access.</p>
@@ -178,6 +254,7 @@
     <h3>Our Brands</h3>
     <p>Companies under YumeMart</p>
   </div>
+
   <div class="brands">
     <strong>YumeMart</strong>
     <strong>Fastners</strong>
@@ -190,6 +267,7 @@
     <h3>Contact Us</h3>
     <p>Let’s work together</p>
   </div>
+
   <div class="contact">
     <p>📧 Email: info@yumemart.com</p>
     <p>📞 Phone: +973 39922917 / 17799986</p>
