@@ -331,11 +331,14 @@
   width: 100%;
   display: block;
 }
-    /* ===== FASTNERS SOCIAL ONE ROW ===== */
+ /* ===== FORCE FASTNERS ONE ROW (MOBILE FIX) ===== */
 .fastners-grid {
-  grid-template-columns: repeat(2, auto); /* سطر واحد */
-  justify-content: center;                /* بالنص */
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px;
+  justify-items: center;
 }
+
 
   </style>
 </head>
