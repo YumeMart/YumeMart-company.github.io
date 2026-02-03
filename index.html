@@ -29,37 +29,59 @@ header nav a:hover {
 
     a { text-decoration: none; color: inherit; }
 
-    header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #F2D93D;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: nowrap;
-    }
+    /* ===== FIXED NAVBAR (ONE LINE ONLY) ===== */
+header {
+  background: linear-gradient(135deg, #0E3B2E, #145A45);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+}
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
 
-    .logo-wrap img { height: 38px; }
+.logo-wrap img {
+  height: 38px;
+}
 
-    nav {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      white-space: nowrap;
-    }
+/* NAV LINKS */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
 
-    nav a {
-      font-weight: 500;
-      font-size: 14px;
-      opacity: 0.9;
-    }
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  color: #F5E27A;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 0;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* MOBILE SAFETY */
+@media (max-width: 768px) {
+  nav {
+    max-width: calc(100vw - 80px);
+  }
+}
 
     nav a:hover { opacity: 1; }
 
