@@ -222,11 +222,12 @@
   transition: all 0.3s ease;
 }
 
-/* فقط YumeMart: خلّي آخر عنصر (Location) بالنص */
-#social:first-of-type .social-item:last-child {
-  grid-column: 1 / -1;
-  justify-self: center;
+/* ===== CENTER LOCATION (YUMEMART ONLY) ===== */
+#social-yumemart .social-grid a:last-child {
+  grid-column: 1 / -1;   /* ياخذ العمودين */
+  justify-self: center;  /* بالنص */
 }
+
 
 /* Fastners: لا تسمح بالكسر */
 .fastners-grid .social-item {
@@ -346,11 +347,7 @@
   justify-items: center;
 }
     
-/* ===== YUMEMART: CENTER LOCATION ONLY ===== */
-#social:first-of-type .social-grid .social-item:last-child {
-  grid-column: 1 / -1;     /* ياخذ العمودين */
-  justify-self: center;    /* يتوسط */
-}
+
 
 
   </style>
@@ -399,7 +396,7 @@
 </section>
   
   <!-- ===== 1 SOCIAL MEDIA LINKS ===== -->
-<section id="social">
+<section id="social-yumemart">
   <div class="social-box">
     <h3>𝐘𝐮𝐦𝐞𝐌𝐚𝐫𝐭</h3>
 
