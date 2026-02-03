@@ -139,22 +139,30 @@
 }
 
 .contact {
-  max-width: 420px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
 }
 
 .contact-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 18px;
+  white-space: nowrap; /* هذا هو السر */
   font-size: 16px;
-  line-height: 1.6;
 }
 
 .contact-row .icon {
   font-size: 18px;
+  min-width: 24px;
+  text-align: center;
 }
+
+.contact-row .text {
+  white-space: nowrap;
+}
+
 
 /* ===== QR BOX ===== */
     .qr-box {
@@ -478,22 +486,24 @@
     <h3>Contact Us</h3>
 
     <div class="contact">
-  <div class="contact">
   <div class="contact-row">
     <span class="icon">📧</span>
-    <span>info@yumemart.com</span>
+    <span class="text">info@yumemart.com</span>
   </div>
 
   <div class="contact-row">
     <span class="icon">📞</span>
-    <span>+973 39922917/17799986</span>
+    <span class="text">+973 39922917 / 17799986</span>
   </div>
 
   <div class="contact-row">
     <span class="icon">📍</span>
-    <span>1738B, Road 1332, Block 713, Tubli, Bahrain</span>
+    <span class="text">
+      1738B, Road 1332, Block 713, Tubli, Bahrain
+    </span>
   </div>
 </div>
+
 
 
 </section>
