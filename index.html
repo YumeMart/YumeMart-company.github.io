@@ -222,10 +222,17 @@
   transition: all 0.3s ease;
 }
 
-.social-item:last-child {
-  grid-column: 1 / -1;     /* ياخذ العمودين */
-  justify-self: center;    /* يتوسط */
+/* فقط YumeMart: خلّي آخر عنصر (Location) بالنص */
+#social:first-of-type .social-item:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
+
+/* Fastners: لا تسمح بالكسر */
+.fastners-grid .social-item {
+  grid-column: auto !important;
+}
+
 
 
 .social-item img {
