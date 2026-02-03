@@ -149,7 +149,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  white-space: nowrap; /* هذا هو السر */
   font-size: 16px;
 }
 
@@ -159,9 +158,11 @@
   text-align: center;
 }
 
-.contact-row .text {
-  white-space: nowrap;
+/* العنوان فقط */
+.contact-row.address .text {
+  line-height: 1.6;
 }
+
 
 
 /* ===== QR BOX ===== */
