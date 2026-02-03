@@ -445,6 +445,20 @@ header,
             width: 100%;
             bottom: 0;
         }
+    /* ===== FORCE FASTNERS TITLE ONE LINE ===== */
+#social h3 {
+  white-space: nowrap;     /* يمنع النزول لسطر ثاني */
+  text-align: center;
+}
+
+/* تصغير خفيف للجوال فقط */
+@media (max-width: 600px) {
+  #social h3 {
+    font-size: 22px;
+    padding: 12px 20px;
+  }
+}
+
   </style>
 </head>
 
